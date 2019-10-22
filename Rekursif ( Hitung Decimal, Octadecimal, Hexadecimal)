@@ -1,0 +1,10 @@
+def toStr(n,base):  
+    convertString = "0123456789ABCDEF"  
+    if n < base:      
+        return convertString[n]  
+    else:      
+        return toStr(n//base,base) + convertString[n%base]
+print("silahkan masukkan angka dan basis yang kalian inginkan.")
+angka = int(input("silahkan masukkan : "))
+basis = int(input("masukkan basis : "))
+print(toStr(angka,basis))
