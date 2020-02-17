@@ -10,11 +10,19 @@ def average():
     array = []
     total = 0
 
-    i = int(input("Masukkan data : "))
+    i = int(input("Masukkan jumlah data : "))
 
-    for x in range (i):
-        nilai = float(input("Masukkan nilai ke {}: ".format(x+1)))
-        array.append(nilai)
+
+    x = 0
+    while x < i:
+    #for x in range (i):
+        nilai = input("Masukkan nilai ke {}: ".format(x+1))
+        if nilai >= "a" and nilai <= "z":
+            print("salah")
+        else:
+            x += 1
+            nilaix = int(nilai)
+            array.append(nilaix)
 
     print("Hasiln nilai total adalah : ",format(sum(array)))
     print("Hasil nilai rata-rata adalah : ", format(sum(array)))
@@ -100,7 +108,6 @@ def gaji_susah():
 # fungsi exit program
 def exit():
     print("Exiting Program")
-    time.sleep(2)
     sys.exit
 
 # fungsi untuk menampilkan menu
@@ -125,4 +132,7 @@ while loop:
     elif pilih == "4":
         exit()
     else :
-        ("salah pilih")
+        print("salah pilih")
+
+
+        #71180293 - Mardonius Riel
