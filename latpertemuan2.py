@@ -7,25 +7,23 @@ from math import *
 #soal 2.1
 def average():
     print("Soal no.1")
-    array = []
-    total = 0
-
-    i = int(input("Masukkan jumlah data : "))
+    array = [] #ini buat listnya nilainya
+    i = int(input("Masukkan jumlah data : ")) #masukann banyaknya data
 
 
-    x = 0
-    while x < i:
-    #for x in range (i):
-        nilai = input("Masukkan nilai ke {}: ".format(x+1))
-        if nilai >= "a" and nilai <= "z":
-            print("salah")
+    x = 0 #berikan nilai awa 0
+    while x < i: #selama x kurang dari i
+    #for x in range (i): <<<salah
+        nilai = input("Masukkan nilai ke {}: ".format(x+1)) #outpunya akan masukan nilai ke 1, karena x+1
+        if nilai >= "a" and nilai <= "z": #jika inputan adalah a-z maka salah
+            print("salah") #print salah
         else:
-            x += 1
-            nilaix = int(nilai)
-            array.append(nilaix)
+            x += 1 #jika inputan adalah angka, maka +1
+            nilaix = int(nilai) #karena nilai inputan adalah string kita perlu merubahnya menjadi int
+            array.append(nilaix) #menambah elemen list dengan append
 
-    print("Hasiln nilai total adalah : ",format(sum(array)))
-    print("Hasil nilai rata-rata adalah : ", format(sum(array)))
+    print("Hasiln nilai total adalah : ",format(sum(array))) #sum buat nambahin semua jumlah nilainya
+    print("Hasil nilai rata-rata adalah : ", format(sum(array) / nilaix)) #nah setelah mendapatkan semua jumlah nilai baru dibagi dengan jumlahnya data
     print()
     menu()
 
@@ -45,10 +43,10 @@ def gaji_susah():
     print("Soal no.3")
     print()
 
-    hari = 35
+    hari = 35 #total hari dalam 5 minggu
     seminggu = 7
     perdaykerja = 9
-    soalminggu = 5
+    soalminggu = 5  #soalnya minta 5 minggu
 
     GajiPerJam = int(input("Gaji perjam : Rp. ")) #Gaji per jam
     PajakGaji = 0.14 #bayar pajak dari penghasilan selama bekerja adalah 14%
@@ -65,7 +63,7 @@ def gaji_susah():
 
     beliBA = int(BeliBajuAkses * gajipajaks) #harga akesesoris
     belitul = int(Atul * gajipajaks) #harga alat tulis
-    sisagaji = int(gajipajaks - (beliBA+belitul))
+    sisagaji = int(gajipajaks - (beliBA+belitul)) #jadi alat tulis sama aksesorisnya dibeli jadi 1, totalnya 11%
     #beliBAS = int(gajipajaks - beliBA)
     #belitul = int(Atul * beliBAS)
     #belituls = int(beliBAS - belitul)
@@ -113,8 +111,8 @@ def exit():
 # fungsi untuk menampilkan menu
 def menu():
     print ("1. Average")
-    print("2. Hitung gajelas")
-    print("3. Gaji gajelas")
+    print("2. Hitung var")
+    print("3. Gaji")
     print("4. Exit")
 
 
