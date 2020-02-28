@@ -1,0 +1,21 @@
+Nilai tengah
+Jika diberikan tiga angka (a,b,c) tentukan nilai tengahnya!
+
+asumsi: a!=b dan b!=c
+
+contoh:
+a = 12, b = 15, c = 18      => output : 15
+a = 8, b = 7, c = 9         => output : 8
+
+def nilaitengah(a,b,c):
+    
+    
+    
+    return... #disini dia akan return antar (a,b,c)
+soal.1
+print(nilaitengah(30,69,80)     => output : 69
+print(nilaitengah(69,40,100)    => output : 69
+
+soal.2
+test case
+
