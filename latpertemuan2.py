@@ -8,23 +8,34 @@ from math import *
 def average():
     print("Soal no.1")
     array = [] #ini buat listnya nilainya
-    i = int(input("Masukkan jumlah data : ")) #masukann banyaknya data
-
+#    i = int(input("Masukkan jumlah data : ")) #masukann banyaknya data
+    i = 1
 
     x = 0 #berikan nilai awa 0
     while x < i: #selama x kurang dari i
     #for x in range (i): <<<salah
         nilai = input("Masukkan nilai ke {}: ".format(x+1)) #outpunya akan masukan nilai ke 1, karena x+1
-        if nilai >= "a" and nilai <= "z": #jika inputan adalah a-z maka salah
+        if (nilai >= "a" and nilai <= "z") or (int(nilai) < 0): #jika inputan adalah a-z maka salah
             print("salah") #print salah
         else:
             x += 1 #jika inputan adalah angka, maka +1
             nilaix = int(nilai) #karena nilai inputan adalah string kita perlu merubahnya menjadi int
             array.append(nilaix) #menambah elemen list dengan append
 
-    print("Hasiln nilai total adalah : ",format(sum(array))) #sum buat nambahin semua jumlah nilainya
-    print("Hasil nilai rata-rata adalah : ", format(sum(array) / nilaix)) #nah setelah mendapatkan semua jumlah nilai baru dibagi dengan jumlahnya data
-    print()
+            if (nilaix % 2 == 1):
+                print("Nami marah besar")
+            else:
+                if (nilaix == 0 ):
+                    print("Mereka tidak mendapatkan kue")
+                else:
+                    print("jumlah potong kue yang diterima masing-masing ", nilaix / 2)
+                
+
+
+
+    #print("Hasiln nilai total adalah : ",format(sum(array))) #sum buat nambahin semua jumlah nilainya
+    #print("Hasil nilai rata-rata adalah : ", format(sum(array) / nilaix)) #nah setelah mendapatkan semua jumlah nilai baru dibagi dengan jumlahnya data
+    #print()
     menu()
 
 
